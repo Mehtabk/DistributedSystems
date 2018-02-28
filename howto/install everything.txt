@@ -1,0 +1,44 @@
+There are two options:
+1) You use something like https://www.sharelatex.com or https://www.overleaf.com/ and work only online or
+2) You install Latex and the necessary tools locally on your computer 
+
+If you choose 1), do not forget to regularly backup your work, otherwise terrible things can happen (e.g., to delete all your work the day before the deadline)
+
+If you choose 2), here is the recommended set of tools to install:
+- https://git-scm.com 
+- (optional) Some GUI client, like TortoiseGIT or GithubDesktop
+- Install the compiler:
+  - On PC
+    - https://www.activestate.com/activeperl/downloads
+    - https://miktex.org/download
+  - On Mac
+    - brew install perl
+    - brew tap miktex/miktex
+    - brew install miktex
+    - mpm --admin --verbose --package-level=basic --upgrade
+    - initexmf --admin --mklinks
+- Install a previewer:
+  - On PC
+    - https://www.sumatrapdfreader.org/free-pdf-reader.html
+  - On Mac
+    - http://skim-app.sourceforge.net/
+    - Run in terminal: 
+      - defaults write -app Skim SKAutoReloadFileUpdate -boolean true 
+   - Open the Skim app, open Settings, switch to Sync and activate to check for modifications
+- https://code.visualstudio.com/ (to have a nice editor)
+
+
+Optional:
+- https://inkscape.org/en/ (to handle and modify PDF images)
+
+Within VS Code, launch VS Code Quick Open (Ctrl+P on PC, Option+P on Mac), paste each of the following commands, followed by enter.
+- ext install latex-workshop
+- ext install code-spell-checker
+- ext install rewrap
+
+This will install the following extensions
+- https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+- https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+- https://marketplace.visualstudio.com/items?itemName=stkb.rewrap
+
+How to open the viewer: Ctrl+P task view

@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "0.1.0",
+  "isShellCommand": true,
+  "showOutput": "always",
+  "echoCommand": true,
+  "tasks": [
+    {
+      "taskName": "view",
+      "isBackground": true,
+      "windows": {
+        "command": "C:\\Progra~1\\SumatraPDF\\SumatraPDF.exe",
+        "args": [
+          "${workspaceRoot}\\thesis.pdf"
+        ]
+      },    
+      "osx": {
+        "command": "/Applications/Skim.app/Contents/MacOS/Skim",        
+        "args": [
+          "${workspaceRoot}/thesis.pdf"
+        ]
+      },        
+      "suppressTaskName": true      
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+% spell-checker:disable
+\documentclass[11pt,a4paper,twoside]{book}
+\input{lib/preamble}
+
+% spell-checker:enable
+\def\titleOfTheThesis{App based solution for the newly admitted migrant kids from different countries to integrate and adjust in German school system in South Tyrol.}
+\def\author{Muhammad Methab Kayani}
+
+\def\supervisor{Andrea Janes}
+\def\date{July, 2018}
+\def\curriculum{Bachelor in Computer Science and Engineering}
+\def\typeOfThesis{Bachelor Thesis}
+% spell-checker:disable
+
+\begin{document}
+\frontmatter
+\input{lib/cover}
+
+\input{abstracts/abstract_english} 
+\input{abstracts/abstract_italiano} 
+\input{abstracts/abstract_deutsch} 
+\input{chapters/acknowledgements}
+
+\tableofcontents
+\listoftables
+\listoffigures
+\lstlistoflistings
+
+\mainmatter
+
+\input{chapters/1-introduction}
+\input{chapters/2-background}
+\input{chapters/3-problem_statement}
+\input{chapters/4-stateoftheart}
+\input{chapters/5-problem_solution}
+\input{chapters/6-evaluation}
+\input{chapters/8-discussion}
+\input{chapters/9-conclusion}
+
+\appendix
+
+\input{chapters/a-appendix}
+\input{chapters/help} % Comment this out when you do not need it anymore
+
+\bibliographystyle{unsrt}                                 
+\bibliography{bibliography}
+
+\end{document}
