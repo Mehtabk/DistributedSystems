@@ -37,7 +37,7 @@ public class ServerCommHandler extends UnicastRemoteObject implements ServerComm
 		if (!myScoreMap.containsKey(name))
 			myScoreMap.put(name,0);
 		myClients.add(cc);
-		cc.publishProblem(currentHash, Server.PROBLEMSIZE);
+		cc.publishProblem(currentHash, Server.PROBLEMSIZE, this);
 		
 	}
 
@@ -47,7 +47,7 @@ public class ServerCommHandler extends UnicastRemoteObject implements ServerComm
 		currentSolution = generateRandomString(Server.PROBLEMSIZE);
 		currentHash = md.digest(currentSolution.getBytes());
 		for (ClientCommInterface cc : myClients) {
-			try {cc.publishProblem(currentHash, Server.PROBLEMSIZE);}
+			try {cc.publishProblem(currentHash, Server.PROBLEMSIZE,this);}
 			catch (Exception e) {System.out.println("Could not print to some client");}
 		}
 		System.out.println("  Problem created and published: " + currentSolution);
@@ -64,11 +64,10 @@ public class ServerCommHandler extends UnicastRemoteObject implements ServerComm
 		if (Arrays.equals(solHash, currentHash)) {
 			isSolved = true;
 			currentHash = null; // So that one cannot submit this solution a second time and get points again
-			myScoreMap.put(name, myScoreMap.get(name)+1) ;
+			//myScoreMap.put(name, myScoreMap.get(name)) ;
 			System.out.println("  Team " + name + " solved the problem correctly");
-		}
-		else {
-			myScoreMap.put(name, myScoreMap.get(name)-1) ;
+		}else {
+		//	myScoreMap.put(name, myScoreMap.get(name)-1) ;
 			System.out.println("  Team " + name + " submitted an incorrect solution");
 		}
 		
