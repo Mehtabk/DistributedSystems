@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AntMe.Online.Client</name>
+    </assembly>
+    <members>
+        <member name="T:AntMe.Online.Client.Configuration">
+            <summary>
+            Konfigurationsklasse für den Online-Client
+            </summary>
+        </member>
+        <member name="M:AntMe.Online.Client.Configuration.Reset">
+            <summary>
+            Setzt die Konfiguratin auf den Stand eines unangemeldeten Users zurück.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.ClientId">
+            <summary>
+            Client ID, die pro Client Instanz im Idealfall nur ein mal erzeugt wird.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.UserId">
+            <summary>
+            User Id des aktuell angemeldeten Users (oder Empty).
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.Email">
+            <summary>
+            Die Email-Adresse / Username des aktuellen Users.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.Roles">
+            <summary>
+            Liste der verfügbaren Rollen für den aktuellen User.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.AccessToken">
+            <summary>
+            API Zugriffstoken des aktuell angemeldeten Users.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Configuration.Expires">
+            <summary>
+            Ablaufdatum des Access Tokens.
+            </summary>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.Open(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Öffnet eine Verbindung, falls notwendig.
+            </summary>
+            <param name="owner">Window Handle des aufrufenden Fensters.</param>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.Close">
+            <summary>
+            Beendet eine Verbindung und löscht vorhandene User-Infos.
+            </summary>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.CheckForUpdates(System.Version)">
+            <summary>
+            Prüft nach eventuellen Versions-Updates.
+            </summary>
+            <param name="version">Aktuelle AntMe!-Version</param>
+            <returns>URL zu einem Download oder null, falls die aktuelle Version installiert ist.</returns>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.Get``1(System.String)">
+            <summary>
+            Führt einen Get-Call zum API Server durch.
+            </summary>
+            <typeparam name="T">Rückgabe-Datentyp</typeparam>
+            <param name="path">Relativer Pfad zur Methode</param>
+            <returns>Rückgabe der Methode</returns>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.Post``2(System.String,``1)">
+            <summary>
+            Führt einen Post-Call zum API Server durch.
+            </summary>
+            <typeparam name="T">Rückgabe-Datentyp</typeparam>
+            <typeparam name="R">Request-Datentyp</typeparam>
+            <param name="path">Relativer Pfad </param>
+            <param name="request">Request Inhalt</param>
+            <returns>Antwort der Methode</returns>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.CreateClient">
+            <summary>
+            Erstellt einen neuen HttpClient mit allen notwendigen Einstellungen. Muss disposed werden!
+            </summary>
+            <returns>Client Instanz</returns>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.Handle``1(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Behandelt den erstellten Request-Task und wirft eventuelle Exceptions, setzt aber gleichzeitig den richtigen Connection-Status
+            </summary>
+            <typeparam name="T">Rückgabe-Dtentyp</typeparam>
+            <param name="call">Request-Task</param>
+            <returns>Methoden-Antwort</returns>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.PromptLogin(System.Windows.Forms.IWin32Window)">
+            <summary>
+            Zeigt den Login-Screen an und verarbeitet alle Rückgabe-Möglichkeiten
+            </summary>
+            <param name="owner">Window-Handle des aufrufenden Fensters</param>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.LoadSettings">
+            <summary>
+            Lädt die Connector Settings.
+            </summary>
+        </member>
+        <member name="M:AntMe.Online.Client.Connection.SaveSettings">
+            <summary>
+            Speichert die Connector-Settings.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.Instance">
+            <summary>
+            Gibt die zentrale Instanz des Connectors zurück.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.State">
+            <summary>
+            Der aktuelle Status des Connectors.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.IsBusy">
+            <summary>
+            Gibt an, ob der Connector gerade beschäftigt ist.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.IsLoggedIn">
+            <summary>
+            Gibt an, ob der Connector einen gültigen Login hat.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.UserId">
+            <summary>
+            Gibt die User-Id des aktuell angemeldeten Users zurück.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.Username">
+            <summary>
+            Gibt den Usernamen des aktuellen Users zurück.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Connection.Roles">
+            <summary>
+            Liste der Rollen, in denen sich der aktuelle User befindet.
+            </summary>
+        </member>
+        <member name="T:AntMe.Online.Client.ConnectionState">
+            <summary>
+            Liste möglicher Connection States.
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.ConnectionState.Disconnected">
+            <summary>
+            Connection noch nicht aufgebaut
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.ConnectionState.NoConnection">
+            <summary>
+            Verbindungsversuch fehlgeschlagen
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.ConnectionState.TokenInvalid">
+            <summary>
+            Vorhandener Token ist abgelaufen
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.ConnectionState.LoggingIn">
+            <summary>
+            User gibt gerade Zugangsdaten ein
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.ConnectionState.Connected">
+            <summary>
+            Verbindung aufgebaut
+            </summary>
+        </member>
+        <member name="F:AntMe.Online.Client.LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AntMe.Online.Client.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AntMe.Online.Client.LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AntMe.Online.Client.NamespaceDoc">
+            <summary>
+            Namespace Doc für Online Client
+            </summary>
+        </member>
+        <member name="T:AntMe.Online.Client.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Properties.Resources.ErrorBody">
+            <summary>
+              Looks up a localized string similar to There are some connection problems with the AntMe! Server. Please check your Internet Connection..
+            </summary>
+        </member>
+        <member name="P:AntMe.Online.Client.Properties.Resources.ErrorTitle">
+            <summary>
+              Looks up a localized string similar to Connection Problems.
+            </summary>
+        </member>
+    </members>
+</doc>

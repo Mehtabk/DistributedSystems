@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AntMe.PlayerManagement</name>
+    </assembly>
+    <members>
+        <member name="T:AntMe.PlayerManagement.AntProperties">
+            <summary>
+            Property Window for all kinds of <see cref="T:AntMe.Simulation.PlayerInfoFilename"/> Ants.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.AntProperties.#ctor(AntMe.Simulation.PlayerInfoFilename)">
+            <summary>
+            Default Contructor.
+            </summary>
+            <param name="playerInfo">Reference to the PlayerInfo</param>
+        </member>
+        <member name="F:AntMe.PlayerManagement.AntProperties.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.AntProperties.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.AntProperties.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.CreateForm">
+            <summary>
+            Selection Form for all available Code Generators.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.CreateForm.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="F:AntMe.PlayerManagement.CreateForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.CreateForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.CreateForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.CreateForm.GeneratedSolutionFile">
+            <summary>
+            Path to the created Solution File.
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.VsGenerator">
+            <summary>
+            Base Class for all Visual Studio based Code Generators.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.VsGenerator.GenerateCS(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the project files for a C# Projekt
+            {0}: Name der Ameisenklasse
+            {1}: Solution Name
+            {2}: Projekt Name
+            {3}: Solution Guid
+            {4}: Projekt Guid
+            {5}: Player Display Name
+            {6}: AntMe Install Path
+            {7}: Project Root
+            </summary>
+            <param name="name"></param>
+            <param name="classPostfix"></param>
+            <param name="path"></param>
+            <param name="solutionFile"></param>
+            <param name="projectFile"></param>
+            <param name="projectUserFile"></param>
+            <param name="classFile"></param>
+            <param name="propertiesFile"></param>
+            <returns>Path to Solution File</returns>
+        </member>
+        <member name="M:AntMe.PlayerManagement.VsGenerator.GenerateVB(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the project files for a C# Projekt
+            {0}: Name der Ameisenklasse
+            {1}: Solution Name
+            {2}: Projekt Name
+            {3}: Solution Guid
+            {4}: Projekt Guid
+            {5}: Player Display Name
+            {6}: AntMe Install Path
+            {7}: Project Root
+            </summary>
+            <param name="name"></param>
+            <param name="classPostfix"></param>
+            <param name="path"></param>
+            <param name="solutionFile"></param>
+            <param name="projectFile"></param>
+            <param name="projectUserFile"></param>
+            <param name="classFile"></param>
+            <param name="propertiesFile"></param>
+            <returns>Path to Solution File</returns>
+        </member>
+        <member name="T:AntMe.PlayerManagement.GeneratorFiles">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_cs_de_docu">
+             <summary>
+               Looks up a localized string similar to using AntMe.Deutsch;
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            
+            namespace AntMe.Player.{2}
+            {
+                /// &lt;summary&gt;
+                /// Diese Datei enthält die Beschreibung für deine Ameise. Die einzelnen Code-Blöcke 
+                /// (Beginnend mit &quot;public override void&quot;) fassen zusammen, wie deine Ameise in den 
+                /// entsprechenden Situationen reagieren soll. Welche Befehle du hier verwenden kannst, 
+                /// findest du auf der Befehlsübersicht im Wiki (http://wiki.antme.ne [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_cs_en_docu">
+             <summary>
+               Looks up a localized string similar to using AntMe.English;
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            
+            namespace AntMe.Player //.{2}
+            {
+                [Player(
+                    ColonyName = &quot;{2}&quot;,
+                    FirstName = &quot;&quot;,
+                    LastName = &quot;&quot;
+                )]
+                [Caste(
+                    Name = &quot;Default&quot;,
+                    AttackModifier = 0,
+                    EnergyModifier = 0,
+                    LoadModifier = 0,
+                    RangeModifier = 0,
+                    RotationSpeedModifier = 0,
+                    SpeedModifier = 0,
+                    ViewRangeModifier = 0
+                )]
+                publi [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_de">
+             <summary>
+               Looks up a localized string similar to using AntMe.Deutsch;
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            
+            namespace AntMe.Player.{2}
+            {
+                [Spieler(
+                    Volkname = &quot;{2}&quot;,
+                    Vorname = &quot;&quot;,
+                    Nachname = &quot;&quot;
+                )]
+                [Kaste(
+                    Name = &quot;Standard&quot;,
+                    AngriffModifikator = 0,
+                    DrehgeschwindigkeitModifikator = 0,
+                    EnergieModifikator = 0,
+                    GeschwindigkeitModifikator = 0,
+                    LastModifikator = 0,
+                    ReichweiteModifikator = 0,
+                    Sich [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_en">
+             <summary>
+               Looks up a localized string similar to using AntMe.English;
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            
+            namespace AntMe.Player.{2}
+            {
+                [Player(
+                    ColonyName = &quot;{2}&quot;,
+                    FirstName = &quot;&quot;,
+                    LastName = &quot;&quot;
+                )]
+                [Caste(
+                    Name = &quot;Default&quot;,
+                    AttackModifier = 0,
+                    EnergyModifier = 0,
+                    LoadModifier = 0,
+                    RangeModifier = 0,
+                    RotationSpeedModifier = 0,
+                    SpeedModifier = 0,
+                    ViewRangeModifier = 0
+                )]
+                public c [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_vb_de">
+             <summary>
+               Looks up a localized string similar to Imports System.Collections.Generic
+            
+            Imports AntMe.Deutsch
+            
+            &lt;Spieler( _
+                Volkname:=&quot;{2}&quot;, _
+                Vorname:=&quot;&quot;, _
+                Nachname:=&quot;&quot; _
+            )&gt; _
+            &lt;Kaste( _
+                Name:=&quot;Standard&quot;, _
+                GeschwindigkeitModifikator:=0, _
+                DrehgeschwindigkeitModifikator:=0, _
+                LastModifikator:=0, _
+                ReichweiteModifikator:=0, _
+                SichtweiteModifikator:=0, _
+                EnergieModifikator:=0, _
+                AngriffModifikator:=0 _
+            )&gt; _
+            Public Class {0}
+                Inherits Basisameise
+            
+            #Region &quot;Kasten&quot;
+            
+                Public Overrides Funct [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_vb_de_docu">
+             <summary>
+               Looks up a localized string similar to Imports System.Collections.Generic
+            
+            Imports AntMe.Deutsch
+            
+            &apos;&apos;&apos; &lt;summary&gt;
+            &apos;&apos;&apos; Diese Datei enthält die Beschreibung für deine Ameise. Die einzelnen Code-Blöcke 
+            &apos;&apos;&apos; (Beginnend mit &quot;public override void&quot;) fassen zusammen, wie deine Ameise in den 
+            &apos;&apos;&apos; entsprechenden Situationen reagieren soll. Welche Befehle du hier verwenden kannst, 
+            &apos;&apos;&apos; findest du auf der Befehlsübersicht im Wiki (http://wiki.antme.net/de/API1:Befehlsliste).
+            &apos;&apos;&apos; 
+            &apos;&apos;&apos; Wenn du etwas Unterstützung bei der Erstellung einer Ameise brauch [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_vb_en">
+             <summary>
+               Looks up a localized string similar to Imports System.Collections.Generic
+            
+            Imports AntMe.English
+            
+            &lt;Player( _
+                ColonyName:=&quot;{2}&quot;, _
+                FirstName:=&quot;&quot;, _
+                LastName:=&quot;&quot; _
+            )&gt; _
+            &lt;Caste( _
+                Name:=&quot;Default&quot;, _
+                SpeedModifier:=0, _
+                RotationSpeedModifier:=0, _
+                LoadModifier:=0, _
+                RangeModifier:=0, _
+                ViewRangeModifier:=0, _
+                EnergyModifier:=0, _
+                AttackModifier:=0 _
+            )&gt; _
+            Public Class {0}
+                Inherits BaseAnt
+            
+            #Region &quot;Casts&quot;
+            
+                Public Overrides Function ChooseCaste(typeCount As Dictionary(Of Strin [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.class_vb_en_docu">
+             <summary>
+               Looks up a localized string similar to Imports System.Collections.Generic
+            
+            Imports AntMe.English
+            
+            &lt;Player( _
+                ColonyName:=&quot;{2}&quot;, _
+                FirstName:=&quot;&quot;, _
+                LastName:=&quot;&quot; _
+            )&gt; _
+            &lt;Caste( _
+                Name:=&quot;Default&quot;, _
+                SpeedModifier:=0, _
+                RotationSpeedModifier:=0, _
+                LoadModifier:=0, _
+                RangeModifier:=0, _
+                ViewRangeModifier:=0, _
+                EnergyModifier:=0, _
+                AttackModifier:=0 _
+            )&gt; _
+            Public Class {0}
+                Inherits BaseAnt
+            
+            #Region &quot;Casts&quot;
+            
+                &apos;&apos;&apos; &lt;summary&gt;
+                &apos;&apos;&apos; Every time that a new ant is born, its job grou [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.project">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;Project ToolsVersion=&quot;12.0&quot; DefaultTargets=&quot;Build&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+              &lt;Import Project=&quot;$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props&quot; Condition=&quot;Exists(&apos;$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props&apos;)&quot; /&gt;
+              &lt;PropertyGroup&gt;
+                &lt;Configuration Condition=&quot; &apos;$(Configuration)&apos; == &apos;&apos; &quot;&gt;Debug&lt;/Configuration&gt;
+                &lt;Platform Condition=&quot; &apos;$(Platform)&apos; == &apos;&apos; &quot;&gt;AnyCPU&lt;/Platform&gt;
+                [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.project_vb">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;Project ToolsVersion=&quot;12.0&quot; DefaultTargets=&quot;Build&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+              &lt;Import Project=&quot;$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props&quot; Condition=&quot;Exists(&apos;$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props&apos;)&quot; /&gt;
+              &lt;PropertyGroup&gt;
+                &lt;Configuration Condition=&quot; &apos;$(Configuration)&apos; == &apos;&apos; &quot;&gt;Debug&lt;/Configuration&gt;
+                &lt;Platform Condition=&quot; &apos;$(Platform)&apos; == &apos;&apos; &quot;&gt;AnyCPU&lt;/Platform&gt;
+                [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:AntMe.PlayerManagement.GeneratorFiles.properties" -->
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.properties_vb">
+             <summary>
+               Looks up a localized string similar to Imports System
+            Imports System.Reflection
+            Imports System.Runtime.InteropServices
+            
+            &apos; General Information about an assembly is controlled through the following 
+            &apos; set of attributes. Change these attribute values to modify the information
+            &apos; associated with an assembly.
+            
+            &apos; Review the values of the assembly attributes
+            
+            &lt;Assembly: AssemblyTitle(&quot;AntMe! Player&quot;)&gt; 
+            &lt;Assembly: AssemblyDescription(&quot;&quot;)&gt; 
+            &lt;Assembly: AssemblyCompany(&quot;&quot;)&gt; 
+            &lt;Assembly: AssemblyProduct(&quot;AntMe!&quot;)&gt; 
+            &lt;Assembly: AssemblyCopyright(&quot; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.solution">
+             <summary>
+               Looks up a localized string similar to 
+            Microsoft Visual Studio Solution File, Format Version 12.00
+            # Visual Studio 2013
+            VisualStudioVersion = 12.0.31101.0
+            MinimumVisualStudioVersion = 10.0.40219.1
+            Project(&quot;{{3}}&quot;) = &quot;{2}&quot;, &quot;{2}.csproj&quot;, &quot;{{4}}&quot;
+            EndProject
+            Global
+            	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+            		Debug|Any CPU = Debug|Any CPU
+            		Release|Any CPU = Release|Any CPU
+            	EndGlobalSection
+            	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+            		{{4}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+            		{{4}}.Debug|Any [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.solution_vb">
+             <summary>
+               Looks up a localized string similar to 
+            Microsoft Visual Studio Solution File, Format Version 12.00
+            # Visual Studio 2013
+            VisualStudioVersion = 12.0.31101.0
+            MinimumVisualStudioVersion = 10.0.40219.1
+            Project(&quot;{{3}}&quot;) = &quot;{2}&quot;, &quot;{2}.vbproj&quot;, &quot;{{4}}&quot;
+            EndProject
+            Global
+            	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+            		Debug|Any CPU = Debug|Any CPU
+            		Release|Any CPU = Release|Any CPU
+            	EndGlobalSection
+            	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+            		{{4}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+            		{{4}}.Debug|Any [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.user">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;Project ToolsVersion=&quot;12.0&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+              &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos; == &apos;Release|AnyCPU&apos;&quot;&gt;
+                &lt;StartAction&gt;Program&lt;/StartAction&gt;
+                &lt;StartProgram&gt;{6}\AntMe.exe&lt;/StartProgram&gt;
+                &lt;StartArguments&gt;/file=&quot;{7}\bin\AntMe.Player.{2}.dll&quot;&lt;/StartArguments&gt;
+              &lt;/PropertyGroup&gt;
+              &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos; == &apos;Debug|AnyCPU&apos;&quot;&gt;
+                &lt;StartAction&gt;Program&lt;/StartActio [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.GeneratorFiles.user_vb">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;Project ToolsVersion=&quot;12.0&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+              &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos; == &apos;Release|AnyCPU&apos;&quot;&gt;
+                &lt;StartAction&gt;Program&lt;/StartAction&gt;
+                &lt;StartProgram&gt;{6}\AntMe.exe&lt;/StartProgram&gt;
+                &lt;StartArguments&gt;/file=&quot;{7}\bin\AntMe.Player.{2}.dll&quot;&lt;/StartArguments&gt;
+              &lt;/PropertyGroup&gt;
+              &lt;PropertyGroup Condition=&quot;&apos;$(Configuration)|$(Platform)&apos; == &apos;Debug|AnyCPU&apos;&quot;&gt;
+                &lt;StartAction&gt;Program&lt;/StartActio [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.PlayerSelector">
+            <summary>
+            Form to select one of the known Player Files.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerSelector.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="F:AntMe.PlayerManagement.PlayerSelector.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerSelector.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.PlayerSelector.SelectedPlayer">
+            <summary>
+            The selected Player.
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.PlayerStore">
+            <summary>
+            Zentraler Player Speicher
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerStore.RegisterFile(System.String)">
+            <summary>
+            Registeres a new File to the Storage.
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerStore.UnregisterFile(System.String)">
+            <summary>
+            Unregisteres a known File from the Storage.
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.PlayerStore.ScanFile(System.String)">
+            <summary>
+            Adds all included Player without adding to the registered files.
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="P:AntMe.PlayerManagement.PlayerStore.KnownPlayer">
+            <summary>
+            Lists all known Player.
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.PlayerStoreConfiguration">
+            <summary>
+            PlayerManagement Configuration
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.PlayerStoreConfiguration.KnownFiles">
+            <summary>
+            List of all known Player
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.add">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.close">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.colony_nonstatic_32x32">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.delete_16x16">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.load_16x16">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.properties_16x16">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.security_32x32">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Properties.Resources.toddler">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:AntMe.PlayerManagement.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesAuthorFormat">
+            <summary>
+              Looks up a localized string similar to {0} {1}.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesDbAccess">
+            <summary>
+              Looks up a localized string similar to Access to a database.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesIoAccess">
+            <summary>
+              Looks up a localized string similar to Access to the file system.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesNetAccess">
+            <summary>
+              Looks up a localized string similar to Access to the network.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesNoAccess">
+            <summary>
+              Looks up a localized string similar to Full access limitation.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesNoAdditionalInfos">
+            <summary>
+              Looks up a localized string similar to No further information available..
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesRefAccess">
+            <summary>
+              Looks up a localized string similar to Ant references external assembly or assemblies..
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesTitle">
+            <summary>
+              Looks up a localized string similar to Properties of {0}.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesUiAccess">
+            <summary>
+              Looks up a localized string similar to Access to the user interface.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.AntPropertiesUnknown">
+            <summary>
+              Looks up a localized string similar to Unknown.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.No">
+            <summary>
+              Looks up a localized string similar to no.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.SimulationPluginRightsLocked">
+            <summary>
+              Looks up a localized string similar to Following rights are not granted in the settings:.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.SimulationPluginRuleViolation">
+            <summary>
+              Looks up a localized string similar to This colony creates a ruleViolation with current settings: {0}.
+            </summary>
+        </member>
+        <member name="P:AntMe.PlayerManagement.Resource.Yes">
+            <summary>
+              Looks up a localized string similar to yes.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.NeedRequest">
+            <summary>
+            Finds out, if the given player needs a security-request
+            </summary>
+            <returns>true, if request is needed</returns>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.IsLocked">
+            <summary>
+            Finds out, if the given player is locked through the antme-settings.
+            </summary>
+            <returns>true, if player is locked</returns>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.IsValidPlayer(AntMe.Simulation.PlayerInfo)">
+            <summary>
+            Checks, if the player is still valid.
+            </summary>
+            <param name="player">player</param>
+            <returns>true, if player is valid.</returns>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.GetRuleViolationMessage(AntMe.Simulation.PlayerInfo)">
+            <summary>
+            Delivers the RuleViolationException-Message for that player.
+            </summary>
+            <param name="player">player</param>
+            <returns>RuleViolation-Message</returns>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.RequestRights(AntMe.Simulation.PlayerInfo)">
+            <summary>
+            Checks player for right-requests.
+            </summary>
+            <param name="player">player</param>
+            <returns>true, if player requests rights</returns>
+        </member>
+        <member name="F:AntMe.PlayerManagement.RightsRequest.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AntMe.PlayerManagement.RightsRequest.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
